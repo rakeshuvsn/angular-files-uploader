@@ -7,6 +7,8 @@
 </nav>
 
 <div class="container mt-3">
-  <app-files-uploader [multiple]="false" (onUpload)="onUploadHandle($event)"></app-files-uploader>
-  <app-files-uploader [multiple]="true" (onUpload)="onUploadHandle($event)"></app-files-uploader>
+  <h3>Browse single file</h3>
+  <app-files-uploader [id]="1" [multiple]="false" (onUpload)="onUploadHandle($event)"></app-files-uploader>
+  <h3>Browse multiple files</h3>
+  <app-files-uploader [id]="2" [multiple]="true" (onUpload)="onUploadHandle($event)"></app-files-uploader>
 </div>

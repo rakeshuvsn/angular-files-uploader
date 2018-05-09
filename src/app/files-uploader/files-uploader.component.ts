@@ -10,6 +10,7 @@ export class FilesUploaderComponent implements OnInit {
   displayLabel: string;
 
   @Input() multiple: boolean;
+  @Input() id: number | string;
   @Output() onUpload: EventEmitter<any> = new EventEmitter();
   constructor(
       public element: ElementRef,
@@ -34,7 +35,7 @@ export class FilesUploaderComponent implements OnInit {
     }
     console.log(filesInput);
     this.files = filesInput;
-    this.onUpload.emit(filesInput);
+    this.onUpload.emit(this.files);
   }
 
 }

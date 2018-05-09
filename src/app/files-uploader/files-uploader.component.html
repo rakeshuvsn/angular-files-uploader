@@ -1,9 +1,9 @@
 <div class="upload-btn-wrapper">
-  <button class="btn">
+  <label for="{{id}}" class="btn-upload">
     <span class="icon"><i class="fa fa-upload"></i></span>
     {{displayLabel}}
-  </button>
-  <input type="file" name="myfile" (change)="handleFileInput($event.target.files)"/>
+  </label>
+  <input type="file" id="{{id}}" class="fileInput" name="myfile" (change)="handleFileInput($event.target.files)"/>
 </div>
 
 
